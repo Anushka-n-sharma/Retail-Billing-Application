@@ -47,7 +47,7 @@
 		window.location.hash="no-back-button";
 		window.location.hash="Again-No-back-button";
 		window.onhashchange=function(){window.location.hash="no-back-button";}
-	</script>
+	</script> 
 	
 	<title>Login</title>
 	
@@ -56,31 +56,90 @@
 			border:1px solid grey;
 			padding:50px;
 			margin:100px 0px;
-			background-color:#F3F3F3;
+			background-image:radial-gradient(circle,#B09CCA,#603E76); 
+			
 		}
 		.alert-danger {
 			margin:10px 0px;
 			text-align:center;
 			padding:5px;
 		}
-		body {
-			background-color:#0C3054;
+		body, html {
+		  height: 100%;
+		  margin: 0;
 		}
+		.bg {
+		    margin: 0;
+		    background-image: url("Image/log5.png");
+		    height: 100%; 
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    background-color: #D0B75B;
+
+		}
+		
 		sup {
 			color:red;
 			font-size:medium;
 		}
+		:root {
+			  --button-color: black;
+			  --button-background-color1:none;
+			  --button-background-color2:#1D1F22;
+			  --cursor: pointer;
+			  --border-radius: 5px;
+			  --border-radius1: 50%;
+				--height: 20px;
+				--width: 70px;
+				--line-height: 30px;
+				--ext-align: center;
+				--transition-property: background, border-radius;
+				--transition-duration: .2s, .5s;
+				--transition-timing-function: linear, ease-in;
+				--border-color: none;
+		}
+		.btn-primary {
+			background-image: url("Image/l.png");
+   			background-repeat: no-repeat;
+   			background-position: center;
+   			outline:none;
+   			color: transparent; /* Hide button text */
+   			background-color: transparent;
+   			border-color: transparent;
+
+		}
+
+		.btn-primary:hover {
+		    display: none;
+		}
+		.btn-primary:active {
+		  outline:none;
+		  border:none;
+		  display:none;
+		}
+		
+		
 	</style>
+	<script>
+
+		setTimeout(function(){
+			document.getElementById('cont').style.visibility = "visible";},1500);	
+		
+
+	</script>
 
   </head>
   <body>
     
-	<div class="container">
+	<div class="bg" id='bg'>
+	<div class="container" id='cont' style="visibility:hidden;">
 	<div class="row">
 	<div class="col-sm-2"></div>
 	<div class="col-sm-8">
 	<div id="box">
-	<div class="alert-danger"><?php echo $str; ?></div>
+	<div class="alert-danger" id="alert"><?php echo $str; ?></div>
+	<div class="form-popup" id="myform">
 	<form method="post">
 		<div class="form-group">
 			<label for="user_number">User Id<sup>*</sup></label>
@@ -94,15 +153,15 @@
 			<label for="password">Password<sup>*</sup></label>
 			<input type="password" class="form-control" name="user_password" id="Password">
 		</div>
-		<button class="btn btn-primary">Sign up</button>
+		<button class="btn btn-primary">L</button>
 	</form>
+	</div>
 	</div>
 	</div>
 	<div class="col-sm-2"></div>
 	</div>
 	</div>
-	
-	
+	</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
