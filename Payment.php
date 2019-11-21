@@ -72,6 +72,7 @@
 				padding:50px;
 				margin:100px 0px;
 				background-color:#F3F3F3;
+				background-image:radial-gradient(circle,#B09CCA,#3E1E4F); 
 			}
 			.alert-success {
 				margin:10px 0px;
@@ -80,7 +81,48 @@
 			}
 			body {
 				background-color:#0C3054;
+				margin: 0;
+		    background-image: url("Image/bg.png");
+		    height: 100%; 
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
 			}
+			:root {
+			  --button-color: white;
+			  --button-background-color1:#007bff;
+			  --button-background-color2:#6c757d;
+			  --cursor: pointer;
+			  --border-radius: 5px;
+			  --border-radius1: 50%;
+				--height: 30px;
+				--width: 95px;
+				--line-height: 30px;
+				--ext-align: center;
+				--transition-property: background, border-radius;
+				--transition-duration: .2s, .5s;
+				--transition-timing-function: linear, ease-in;
+		}
+		.btn-primary {
+		    color: var(--button-color);
+		    background-color: var(--button-background-color1);
+		    border-radius: var(--border-radius);
+		    cursor: var(--cursor)
+		    height:var(--height);
+			width:var(--width);
+			line-height:var(--line-height);
+			ext-align:var(--ext-align);
+			transition-property:var(--transition-property);
+			transition-duration:var(--transition-duration);
+			transition-timing-function:var(--transition-timing-function);
+			box-shadow:  0 0 20px black ;
+
+		}
+
+		.btn-primary:hover {
+		    background-color: var(--button-background-color2);
+		    border-radius: var(--border-radius1);
+		}
 		</style>
 
 	</head>
